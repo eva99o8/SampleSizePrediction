@@ -1,0 +1,49 @@
+\documentclass[
+11pt, 
+english,
+singlespacing, 
+headsepline, 
+]{MastersDoctoralThesis} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+
+\usepackage{mathpazo} 
+
+\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} 
+
+\addbibresource{example.bib} 
+
+\usepackage[autostyle=true]{csquotes} 
+
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=3.8cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+}
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{thesis}
+\include{summary}
